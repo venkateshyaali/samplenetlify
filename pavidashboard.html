@@ -1,0 +1,486 @@
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+
+<style>
+/* material icons ref - https://material.io/resources/icons -->*/
+body .zc-pb-embed-placeholder-content{
+	font-size:14px !important;
+}
+.btn{
+	text-shadow: none;
+}
+.btn-editptofile{
+    position: absolute;
+    top: 11px;
+    right: 4%;
+	display:none;
+}
+
+.panel-body:hover>h4>.btn-editptofile{
+	display:block;
+}
+
+.btn-editcompany{
+	position: absolute;
+    top: 0;
+    right: 0;
+	display:block;
+}
+.panel-body:hover>h4>.btn-editptofile{
+	display:block;
+}
+.panel-body:hover>.container>h4>.btn-editcompany{
+	display:block;
+}
+td{
+	vertical-align:middle !important;
+}
+
+/* card details start (ref-https://codepen.io/marcovpq/pen/xomjXj)*/
+.card {
+  border-radius: 5px;
+  margin: 2rem 0;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+.card__header {
+  position: relative;
+  padding: 1rem;
+}
+.card__icon {
+  align-items: center;
+  display: flex;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+  text-align: center;
+  border-radius: 3px;
+  margin-top: -4rem;
+  padding: 2rem;
+  float: left;
+  z-index: 1;
+}
+.card__icon--orange {
+  background-image: linear-gradient(60deg, #ffa726, #fb8c00);
+}
+.card__icon--green {
+  background-image: linear-gradient(60deg, #66bb6a, #43a047);
+}
+.card__icon--red {
+  background-image: linear-gradient(60deg, #ef5350, #e53935);
+}
+.card__icon--blue {
+  background-image: linear-gradient(60deg, #26c6da, #00acc1);
+}
+.card__icon i {
+  color: #fff;
+  font-size: 3.6rem;
+  width: 56px;
+}
+.card__category {
+  display: block;
+  text-align: right;
+  font-size: 1.4rem;
+  color: #999;
+  top: 10px;
+  width: 96%;
+}
+.card__title {
+  font-size: 2.4rem;
+  font-weight: lighter;
+  text-align: right;
+  width: 96%;
+}
+.card__title small {
+  font-weight: 600;
+}
+.card__body {
+  margin: 0 auto;
+  padding: .5rem 0 1rem 0;
+  width: 90%;
+}
+.card__body h4 {
+  font-size: 2.2rem;
+  font-weight: lighter;
+}
+.card__body p {
+  color: #888888;
+  font-size: 1.4rem;
+}
+.card__footer {
+  display: flex;
+  border-top: 1px solid #eee;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 1rem 1rem;
+  width: 90%;
+}
+.card__footer i {
+  color: #6f6f6f;
+  font-size: 1.4rem;
+}
+.card__footer a {
+  color: #888888;
+  text-decoration: none;
+  align-self: center;
+  margin-left: .5rem;
+  font-size: 1.3rem;
+}
+.card:hover{
+	box-shadow:0 1px 15px 3px rgba(0, 0, 0, 0.14);
+	cursor:pointer;
+}
+/* card details end (ref-https://codepen.io/marcovpq/pen/xomjXj)*/
+</style>
+
+
+<!-- pagebase start -->
+
+<div class="container col-lg-12">
+	<h2>Company Information</h2>
+</div>
+
+<!-- companydetails start -->
+<div class="container col-lg-6">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h4>Profile Details 
+				<button type="button" class="btn btn-default btn-sm btn-editptofile">
+				<span class="glyphicon glyphicon-edit"></span> Edit Profile
+				</button>
+			</h4>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td>Company Name</td>
+						<td>Amazon</td>
+					</tr>
+					<tr>
+						<td>Branch Name</td>
+						<td>Vizag</td>
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td>ashok.r@nistinstitute.com</td>
+					</tr>
+					<tr>
+						<td>Contact Number</td>
+						<td>+91 9966887452</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table">
+				<thead>
+					<tr>
+						<td>
+							<button type="button" class="btn btn-primary btn-sm">
+								<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Project
+							</button>
+						</td>
+						<td>
+							<button type="button" class="btn btn-primary btn-sm">
+								<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Employee
+							</button>
+						</td>
+						<td>
+							<button type="button" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-th-list"></span>&nbsp;&nbsp;Import Employee List
+							</button>
+						</td>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+</div>
+<!-- companydetails end -->
+
+<!-- dashboardcards start -->
+<div class="container col-lg-6">
+	<!-- card start -->
+	<div class="col-md-6 col-lg-6">
+		<div class="card">
+			<div class="card__header">
+				<div class="card__icon card__icon--green">
+					<i class="material-icons">people</i>
+				</div>
+				<p class="card__category">Total Employees</p>
+				<h3 class="card__title">
+					100
+					<small</small>
+				</h3>
+			</div>
+		</div>
+	</div>
+	<!-- card end -->
+	<!-- card start -->
+	<div class="col-md-6 col-lg-6">
+		<div class="card">
+			<div class="card__header">
+				<div class="card__icon card__icon--red">
+					<i class="material-icons">star</i>
+				</div>
+				<p class="card__category">Total Observers</p>
+				<h3 class="card__title">
+					11
+					<small</small>
+				</h3>
+			</div>
+		</div>
+	</div>
+	<!-- card end -->
+	<!-- card start -->
+	<div class="col-md-6 col-lg-6">
+		<div class="card">
+			<div class="card__header">
+				<div class="card__icon card__icon--orange">
+					<i class="material-icons">whatshot</i>
+				</div>
+				<p class="card__category">Total Projects</p>
+				<h3 class="card__title">
+					5
+					<small</small>
+				</h3>
+			</div>
+		</div>
+	</div>
+	<!-- card end -->
+	<!-- card start -->
+	<div class="col-md-6 col-lg-6">
+		<div class="card">
+			<div class="card__header">
+				<div class="card__icon card__icon--blue">
+					<i class="material-icons">school</i>
+				</div>
+				<p class="card__category">Total Trainings</p>
+				<h3 class="card__title">
+					29
+					<small</small>
+				</h3>
+			</div>
+		</div>
+	</div>
+	<!-- card end -->
+</div>
+<!-- dashboardcards end -->
+
+<!-- overallprojectsbase start -->
+<div class="container  col-lg-12">
+	<div class="panel panel-default">
+		<div class="panel-heading"><h4>Projects & Trainings</h4></div>
+		<div class="panel-body">
+			<!-- singleprojectbase start -->
+			<div class="container col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="container col-lg-12">
+							<h4>
+								<table class="table">
+									<thead>
+										<tr style="border-bottom: 1px solid #d7d7d7;">
+											<td>Project Name</td>
+											<td>Safety Measures - An Introduction</td>
+										</tr>
+									</thead>
+								</table>
+								<button type="button" class="btn btn-default btn-sm btn-editcompany">
+								<span class="glyphicon glyphicon-edit"></span> Edit Project Details
+								</button>
+							</h4>
+						</div>
+						<div class="container col-lg-4">
+							<table class="table">
+								<thead>
+									<tr>
+										<td>Start Date</td>
+										<td>15/02/2018</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>End Date</td>
+										<td>15/02/2019</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="container col-lg-4">
+							<table class="table">
+								<thead>
+									<tr>
+										<td>Branch Involved</td>
+										<td>Delhi</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Project Status</td>
+										<td><span class="label label-success">Active</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="container col-lg-4">
+							<table class="table">
+								<thead>
+									<td><button type="button" class="btn btn-primary">Add Training</button></td>
+									<td> </td>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="container col-lg-10">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									Trainings List
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<td>Training Name</td>
+												<td>Start Date</td>
+												<td>End Date</td>
+												<td>End Status</td>
+												<td></td>
+												<td></td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Sample</td>
+												<td>20/06/2018</td>
+												<td>20/06/2019</td>
+												<td>Active</td>
+												<td><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Edit Training</button></td>
+												<td><button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Attendee List </button></td>
+											</tr>
+											<tr>
+												<td>Test Train</td>
+												<td>18/02/2018</td>
+												<td>29/07/2018</td>
+												<td>Completed</td>
+												<td><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Edit Training</button></td>
+												<td><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Attendee List </button></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- singleprojectbase end -->
+			
+			<!-- singleprojectbase start -->
+			<div class="container col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="container col-lg-12">
+							<h4>
+								<table class="table">
+									<thead>
+										<tr style="border-bottom: 1px solid #d7d7d7;">
+											<td>Project Name</td>
+											<td>Safety Measures - An Introduction</td>
+										</tr>
+									</thead>
+								</table>
+								<button type="button" class="btn btn-default btn-sm btn-editcompany">
+								<span class="glyphicon glyphicon-edit"></span> Edit Project Details
+								</button>
+							</h4>
+						</div>
+						<div class="container col-lg-4">
+							<table class="table">
+								<thead>
+									<tr>
+										<td>Start Date</td>
+										<td>15/02/2018</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>End Date</td>
+										<td>15/02/2019</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="container col-lg-4">
+							<table class="table">
+								<thead>
+									<tr>
+										<td>Branch Involved</td>
+										<td>Delhi</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Project Status</td>
+										<td><span class="label label-success">Active</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="container col-lg-4">
+							<table class="table">
+								<thead>
+									<td><button type="button" class="btn btn-primary">Add Training</button></td>
+									<td> </td>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="container col-lg-10">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									Trainings List
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<td>Training Name</td>
+												<td>Start Date</td>
+												<td>End Date</td>
+												<td>End Status</td>
+												<td></td>
+												<td></td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Sample</td>
+												<td>20/06/2018</td>
+												<td>20/06/2019</td>
+												<td>Active</td>
+												<td><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Edit Training</button></td>
+												<td><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Attendee List </button></td>
+											</tr>
+											<tr>
+												<td>Test Train</td>
+												<td>18/02/2018</td>
+												<td>29/07/2018</td>
+												<td>Completed</td>
+												<td><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Edit Training</button></td>
+												<td><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Attendee List </button></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- singleprojectbase end -->
+			
+			
+		</div>
+	</div>
+</div>
+<!-- overallprojectsbase end -->
+
+<!-- pagebase end -->
